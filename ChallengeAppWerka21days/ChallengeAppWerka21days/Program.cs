@@ -1,4 +1,6 @@
-﻿// zadanie domowe dzień 4 podejście 1
+﻿// zadanie domowe dzień 4 podejście 2
+using System;
+
 string name1 = "Ewa";
 string name2 = "Weronika";
 string name3 = "Maksymilian";
@@ -14,33 +16,19 @@ string result1 = name1 + age1 + sex1;
 string result2 = name2 + age2 + sex1;
 String result3 = name3 + age3 + sex2;
 
-Console.WriteLine(result1);
-Console.WriteLine(result2);
-Console.WriteLine(result3);
+// Console.WriteLine(result1);
+// Console.WriteLine(result2);
+// Console.WriteLine(result3);
 
 if (name1 == "Ewa" && age1 < 30)
 {
     Console.WriteLine("Jest tu Ewa poniżej przed trzydziestką");
 }
-else
+else if (name2 == "Weronika" && age2 == 28)
 {
-    Console.WriteLine("Nie ma tu Ewy przed trzydziestką");
+    Console.WriteLine("Weronika ma 28 lat");
 }
-
-if (name2 == "Weronika" && age2 == 28)
-{
-    Console.WriteLine(result2 + "Weronika ma 28 lat");
-}
-else
-{
-    Console.WriteLine("Nie ma tu takiej Weroniki");
-}
-
-if (sex2 == 'M' && name3 == "Robert" && age3 < 18)
-{
-    Console.WriteLine("Jest tu niepełnoletni chłopak");
-}
-else
+else if (sex2 == 'M' && name3 == "Robert" && age3 < 18)
 {
     Console.WriteLine("Nie ma tu niepełnoletniego Roberta");
 }
