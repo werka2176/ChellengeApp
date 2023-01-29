@@ -1,4 +1,4 @@
-﻿class Employee
+﻿public class Employee
 {
     private List<int> score = new List<int>();
     public Employee(string name, string surname, int age)
@@ -21,5 +21,9 @@
     public void AddScore(int number)
     {
         this.score.Add(number);
+    }
+    public void SubtractScore(int number)
+    {
+        this.score.Add(-1 * number);
     }
 }
