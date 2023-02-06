@@ -1,29 +1,46 @@
-﻿public class Employee
-{
-    private List<int> score = new List<int>();
-    public Employee(string name, string surname, int age)
-    {
-        this.Name = name;
-        this.Surname = surname;
-        this.Age = age;
-    }
-    public string Name { get; set; }
-    public string Surname { get; set; }
-    public int Age { get; set; }
-    public int Result
-    {
-        get
-        {
-            return this.score.Sum();
-        }
-    }
+﻿using ChallengeAppWerka21days;
 
-    public void AddScore(int number)
+namespace ChellengeAppWerka21days
+{
+
+    public class Employee
     {
-        this.score.Add(number);
-    }
-    public void SubtractScore(int number)
-    {
-        this.score.Add(-1 * number);
+        private List<float> grades = new List<float>();
+
+        public Employee(string name, string surname)
+        {
+            this.Name = name;
+            this.Surname = surname;
+        }
+
+        public string Name { get; set; }
+
+        public string Surname { get; set; }
+
+        public void AddGrade(float grade)
+        {
+            this.grades.Add(grade);
+        }
+
+        public Statistics GetStatistics()
+        {
+            var statistics = new Statistics();
+
+            statistics.Average = 0;
+            statistics.Max = float.MinValue;
+            statistics.Min = float.MaxValue;
+
+            foreach (var grade in this.grades)
+            {
+                statistics.Max = Math.Max(statistics.Max, grade);
+                statistics.Min = Math.Min(statistics.Min, grade);
+                statistics.Average += grade;
+            }
+
+            statistics.Average = statistics.Average / this.grades.Count;
+
+
+            return statistics;
+        }
     }
 }
