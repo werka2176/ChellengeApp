@@ -19,7 +19,43 @@ namespace ChellengeAppWerka21days
 
         public void AddGrade(float grade)
         {
-            this.grades.Add(grade);
+            int valueInInt = (int)grade;
+
+            if (grade >= 0 && grade <= 100)
+
+            {
+                this.grades.Add(grade);
+            }
+            else
+            {
+                Console.WriteLine("Pracownik może otrzymać jednorazowo maksymalnie 100 punktów.");
+            }
+        }
+        public void AddGrade(string grade)
+        {
+            if (float.TryParse(grade, out float result))
+            {
+                this.AddGrade(result);
+            }
+            else
+            {
+                Console.WriteLine("String is not float");
+            }
+        }
+        public void AddGrade(int grade)
+        {
+            float result = (float)grade;
+            this.AddGrade(result);
+        }
+        public void AddGrade(long grade)
+        {
+            float result = (float)grade;
+            this.AddGrade(result);
+        }
+        public void AddGrade(double grade)
+        {
+            float result = (float)grade;
+            this.AddGrade(result);
         }
 
         public Statistics GetStatistics()
