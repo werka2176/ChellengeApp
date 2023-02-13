@@ -15,10 +15,10 @@ namespace TestEmployee
             employee.AddGrade(27);
 
             //act
-            var statistics = employee.GetStatistics();
+            var statistics1 = employee.GetStatisticsForEach();
 
             //assert
-            Assert.AreEqual(27, statistics.Max);
+            Assert.AreEqual(27, statistics1.Max);
 
         }
         [Test]
@@ -31,10 +31,10 @@ namespace TestEmployee
             employee.AddGrade(9);
 
             //act
-            var statistics = employee.GetStatistics();
+            var statistics1 = employee.GetStatisticsForEach();
 
             //assert
-            Assert.AreEqual(6, statistics.Average);
+            Assert.AreEqual(6, statistics1.Average);
 
         }
         [Test]
@@ -47,10 +47,10 @@ namespace TestEmployee
             employee.AddGrade(9);
 
             //act
-            var statistics = employee.GetStatistics();
+            var statistics1 = employee.GetStatisticsForEach();
 
             //assert
-            Assert.AreEqual(7, statistics.Min);
+            Assert.AreEqual(7, statistics1.Min);
 
         }
         [Test]
@@ -63,12 +63,12 @@ namespace TestEmployee
             employee.AddGrade("9");
 
             //act
-            var statistics = employee.GetStatistics();
+            var statistics1= employee.GetStatisticsForEach();
 
             //assert
-            Assert.AreEqual(6, statistics.Min);
-            Assert.AreEqual(12, statistics.Max);
-            Assert.AreEqual(9, statistics.Average);
+            Assert.AreEqual(6, statistics1.Min);
+            Assert.AreEqual(12, statistics1.Max);
+            Assert.AreEqual(9, statistics1.Average);
 
         }
     }
