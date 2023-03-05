@@ -13,20 +13,3 @@ Console.WriteLine($"Average: {statistics.Average:N2}");
 Console.WriteLine($"Max: {statistics.Max}");
 Console.WriteLine($"Min: {statistics.Min}");
 
-Console.WriteLine("Wyniki dla For:");
-statistics = employee.GetStatisticsWithFor();
-Console.WriteLine($"Average: {statistics.Average:N2}");
-Console.WriteLine($"Max: {statistics.Max}");
-Console.WriteLine($"Min: {statistics.Min}");
-
-Console.WriteLine("Wyniki dla DoWhile:");
-statistics = employee.GetStatisticsWithDoWhile();
-Console.WriteLine($"Average: {statistics.Average:N2}");
-Console.WriteLine($"Max: {statistics.Max}");
-Console.WriteLine($"Min: {statistics.Min}");
-
-Console.WriteLine("Wyniki dla While:");
-statistics = employee.GetStatisticsWithWhile();
-Console.WriteLine($"Average: {statistics.Average:N2}");
-Console.WriteLine($"Max: {statistics.Max}");
-Console.WriteLine($"Min: {statistics.Min}");
